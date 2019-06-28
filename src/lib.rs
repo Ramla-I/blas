@@ -42,12 +42,12 @@
 //!
 //! [blas]: https://en.wikipedia.org/wiki/BLAS
 //! [usage]: https://blas-lapack-rs.github.io/usage
+#![no_std]
 
 extern crate blas_sys as ffi;
-extern crate libc;
 extern crate num_complex as num;
 
-use libc::c_char;
+pub type c_char = i8;
 
 /// A complex number with 32-bit parts.
 #[allow(non_camel_case_types)]
